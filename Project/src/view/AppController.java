@@ -5,7 +5,6 @@ import javafx.scene.layout.VBox;
 import model.*;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 

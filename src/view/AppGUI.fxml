@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AppController">
+   <children>
+      <TabPane fx:id="allTabPane" layoutY="24.0" prefHeight="435.0" prefWidth="951.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="membersTab" text="Members">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="659.0" prefWidth="951.0">
+                     <children>
+                        <TabPane fx:id="membersTabPane" layoutY="-1.0" prefHeight="406.0" prefWidth="951.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="addMemberTab" text="Add a member">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="447.0" layoutY="41.0" text="First name:" />
+                                          <TextField fx:id="addMemberFN" layoutX="367.0" layoutY="67.0" prefHeight="25.0" prefWidth="220.0" />
+                                          <Label layoutX="447.0" layoutY="104.0" text="Last name:" />
+                                          <Label layoutX="441.0" layoutY="164.0" text="ID (optional):" />
+                                          <Label layoutX="401.0" layoutY="235.0" text="Status:" />
+                                          <CheckBox fx:id="addMemberStatus" layoutX="441.0" layoutY="236.0" mnemonicParsing="false" text="Paying member?" />
+                                          <Button fx:id="addMemberConfirm" layoutX="400.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="155.0" text="Add member" />
+                                          <TextField fx:id="addMemberLN" layoutX="368.0" layoutY="130.0" prefHeight="25.0" prefWidth="220.0" />
+                                          <TextField fx:id="addMemberID" layoutX="368.0" layoutY="191.0" prefHeight="25.0" prefWidth="220.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="manageMembersTab" onSelectionChanged="#tabChanged" text="Manage the members">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane layoutX="215.0" prefHeight="377.0" prefWidth="737.0">
+                                             <children>
+                                                <Label layoutX="46.0" layoutY="67.0" text="First name:" />
+                                                <TextField fx:id="manageMemberFN" editable="false" layoutX="117.0" layoutY="63.0" prefHeight="25.0" prefWidth="220.0" />
+                                                <Label layoutX="47.0" layoutY="118.0" text="Last name:" />
+                                                <TextField fx:id="manageMemberLN" editable="false" layoutX="117.0" layoutY="114.0" prefHeight="25.0" prefWidth="220.0" />
+                                                <Label layoutX="35.0" layoutY="170.0" text="ID (optional):" />
+                                                <TextField fx:id="manageMemberID" editable="false" layoutX="117.0" layoutY="166.0" prefHeight="25.0" prefWidth="220.0" />
+                                                <CheckBox fx:id="manageMemberStatus" disable="true" layoutX="117.0" layoutY="220.0" mnemonicParsing="false" text="Paying member?" />
+                                                <Label layoutX="69.0" layoutY="220.0" text="Status:" />
+                                                <Button fx:id="manageMemberStart" layoutX="117.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="110.0" text="Edit the member" />
+                                                <Button fx:id="manageMemberSave" disable="true" layoutX="353.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleActions" text="Save the changes" />
+                                                <Button fx:id="manageMemberCancel" disable="true" layoutX="236.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="105.0" text="Cancel" />
+                                                <Button fx:id="deleteMember" layoutX="475.0" layoutY="271.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="69.0" text="Delete" />
+                                             </children>
+                                          </AnchorPane>
+                                          <ComboBox fx:id="membersListTab" layoutX="30.0" layoutY="22.0" onAction="#handleActions" prefWidth="150.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="gamesTab" text="Games">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="gamesTabPane" layoutY="-2.0" prefHeight="407.0" prefWidth="951.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="addGameTab" text="Add a game">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="32.0" layoutY="27.0" text="Name:" />
+                                          <TextField fx:id="addGameName" layoutX="32.0" layoutY="50.0" prefHeight="25.0" prefWidth="203.0" />
+                                          <Label layoutX="32.0" layoutY="88.0" text="Number of players:" />
+                                          <TextField fx:id="addGameNr" layoutX="142.0" layoutY="85.0" prefHeight="25.0" prefWidth="37.0" />
+                                          <Label layoutX="32.0" layoutY="129.0" text="Status:" />
+                                          <CheckBox fx:id="addGameStatus" layoutX="76.0" layoutY="129.0" mnemonicParsing="false" selected="true" text="Available?" />
+                                          <Label layoutX="31.0" layoutY="164.0" text="Rating:" />
+                                          <TextField fx:id="addGameRating" layoutX="76.0" layoutY="160.0" prefHeight="25.0" prefWidth="57.0" />
+                                          <TextArea fx:id="addGameDesc" layoutX="419.0" layoutY="46.0" prefHeight="200.0" prefWidth="507.0" />
+                                          <Label layoutX="419.0" layoutY="27.0" text="Description:" />
+                                          <Label layoutX="32.0" layoutY="206.0" text="Image link:" />
+                                          <TextField fx:id="addGameLink" layoutX="97.0" layoutY="202.0" prefHeight="25.0" prefWidth="309.0" />
+                                          <Button fx:id="addGameConfirm" layoutX="133.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="196.0" text="Add game" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="manageGamesTab" onSelectionChanged="#tabChanged" text="Manage games">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="gamesListTab" prefHeight="377.0" prefWidth="201.0" />
+                                          <AnchorPane layoutX="201.0" prefHeight="377.0" prefWidth="751.0">
+                                             <children>
+                                                <Label layoutX="26.0" layoutY="40.0" text="Name:" />
+                                                <TextField fx:id="manageGamesName" editable="false" layoutX="26.0" layoutY="63.0" prefHeight="25.0" prefWidth="203.0" />
+                                                <Label layoutX="26.0" layoutY="101.0" text="Number of players:" />
+                                                <TextField fx:id="manageGamesNr" editable="false" layoutX="136.0" layoutY="98.0" prefHeight="25.0" prefWidth="37.0" />
+                                                <Label layoutX="26.0" layoutY="142.0" text="Status:" />
+                                                <CheckBox fx:id="manageGamesStatus" disable="true" layoutX="70.0" layoutY="142.0" mnemonicParsing="false" selected="true" text="Available?" />
+                                                <Label layoutX="25.0" layoutY="177.0" text="Rating:" />
+                                                <TextField fx:id="manageGamesRating" editable="false" layoutX="70.0" layoutY="173.0" prefHeight="25.0" prefWidth="57.0" />
+                                                <TextArea fx:id="manageGamesDesc" editable="false" layoutX="413.0" layoutY="63.0" prefHeight="200.0" prefWidth="310.0" />
+                                                <Label layoutX="413.0" layoutY="40.0" text="Description:" />
+                                                <Label layoutX="26.0" layoutY="219.0" text="Image link:" />
+                                                <TextField fx:id="manageGamesLink" editable="false" layoutX="91.0" layoutY="215.0" prefHeight="25.0" prefWidth="309.0" />
+                                                <Button fx:id="manageGamesSave" disable="true" layoutX="460.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleActions" text="Save the changes" />
+                                                <Button fx:id="manageGamesCancel" disable="true" layoutX="288.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="155.0" text="Cancel" />
+                                                <Button fx:id="manageGamesEdit" layoutX="117.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="155.0" text="Edit the game" />
+                                                <Button fx:id="deleteGame" layoutX="594.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="69.0" text="Delete" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="eventsTab" text="Events">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="eventsTabPane" prefHeight="405.0" prefWidth="951.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="addEventTab" text="Add event">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="572.0">
+                                       <children>
+                                          <Label layoutX="212.0" layoutY="36.0" text="Name:" />
+                                          <TextField fx:id="addEventName" layoutX="212.0" layoutY="63.0" prefHeight="25.0" prefWidth="224.0" />
+                                          <Label layoutX="212.0" layoutY="102.0" text="Description:" />
+                                          <TextArea fx:id="addEventDesc" layoutX="212.0" layoutY="127.0" prefHeight="95.0" prefWidth="225.0" />
+                                          <Label layoutX="480.0" layoutY="139.0" text="Day:" />
+                                          <Label layoutX="515.0" layoutY="140.0" text="Month:" />
+                                          <Label layoutX="569.0" layoutY="140.0" text="Year:" />
+                                          <TextField fx:id="addEventDay" layoutX="476.0" layoutY="157.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <TextField fx:id="addEventMonth" layoutX="513.0" layoutY="157.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <TextField fx:id="addEventYear" layoutX="561.0" layoutY="157.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <Label layoutX="622.0" layoutY="140.0" text="Hour:" />
+                                          <TextField fx:id="addEventHour" layoutX="621.0" layoutY="157.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="659.0" layoutY="141.0" text="Minute:" />
+                                          <TextField fx:id="addEventMinute" layoutX="662.0" layoutY="157.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <ComboBox fx:id="addEventGame" layoutX="507.0" layoutY="63.0" prefWidth="150.0" />
+                                          <Label layoutX="533.0" layoutY="38.0" text="Game (optional):" />
+                                          <Button fx:id="addEventConfirm" layoutX="346.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="259.0" text="Add event" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="manageEventsTab" onSelectionChanged="#tabChanged" text="Manage events">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="eventsTabList" prefHeight="375.0" prefWidth="164.0" />
+                                          <AnchorPane layoutX="164.0" prefHeight="376.0" prefWidth="787.0">
+                                             <children>
+                                                <Label layoutX="20.0" layoutY="37.0" text="Name:" />
+                                                <TextField fx:id="manageEventsName" editable="false" layoutX="20.0" layoutY="64.0" prefHeight="25.0" prefWidth="224.0" />
+                                                <Label layoutX="20.0" layoutY="103.0" text="Description:" />
+                                                <TextArea fx:id="manageEventsDesc" editable="false" layoutX="20.0" layoutY="128.0" prefHeight="95.0" prefWidth="225.0" />
+                                                <Label layoutX="313.0" layoutY="127.0" text="Day:" />
+                                                <Label layoutX="348.0" layoutY="128.0" text="Month:" />
+                                                <Label layoutX="402.0" layoutY="128.0" text="Year:" />
+                                                <TextField fx:id="manageEventsDay" editable="false" layoutX="309.0" layoutY="145.0" prefHeight="25.0" prefWidth="31.0" />
+                                                <TextField fx:id="manageEventsMonth" editable="false" layoutX="346.0" layoutY="145.0" prefHeight="25.0" prefWidth="41.0" />
+                                                <TextField fx:id="manageEventsYear" editable="false" layoutX="394.0" layoutY="145.0" prefHeight="25.0" prefWidth="41.0" />
+                                                <Label layoutX="337.0" layoutY="182.0" text="Hour:" />
+                                                <TextField fx:id="manageEventsHour" editable="false" layoutX="336.0" layoutY="199.0" prefHeight="25.0" prefWidth="31.0" />
+                                                <Label layoutX="374.0" layoutY="183.0" text="Minute:" />
+                                                <TextField fx:id="manageEventsMinute" editable="false" layoutX="377.0" layoutY="199.0" prefHeight="25.0" prefWidth="31.0" />
+                                                <ComboBox fx:id="manageEventsGame" disable="true" layoutX="302.0" layoutY="89.0" prefWidth="150.0" />
+                                                <Label layoutX="328.0" layoutY="64.0" text="Game (optional):" />
+                                                <Button fx:id="manageEventsSave" disable="true" layoutX="394.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleActions" text="Save the changes" />
+                                                <Button fx:id="manageEventsCancel" disable="true" layoutX="222.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="155.0" text="Cancel" />
+                                                <Button fx:id="manageEventsStart" layoutX="51.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="155.0" text="Edit the event" />
+                                                <TextArea fx:id="manageEventsMembers" editable="false" layoutX="555.0" layoutY="50.0" prefHeight="211.0" prefWidth="200.0" />
+                                                <ComboBox fx:id="manageEventsAddMember" disable="true" layoutX="580.0" layoutY="284.0" onAction="#handleActions" prefWidth="150.0" />
+                                                <Label layoutX="543.0" layoutY="28.0" text="People who are going to attend the event:" />
+                                                <Label layoutX="556.0" layoutY="263.0" text="Add someone who is going to attend" />
+                                                <Button fx:id="deleteEvent" layoutX="50.0" layoutY="309.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="451.0" text="Delete" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="reservationsTab" text="Reservations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="reservationsTabPane" prefHeight="405.0" prefWidth="951.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="addReservationTab" text="Add reservation">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="457.0" layoutY="26.0" text="Member:" />
+                                          <ComboBox fx:id="addReservationMember" layoutX="406.0" layoutY="43.0" prefWidth="150.0" />
+                                          <Label layoutX="464.0" layoutY="85.0" text="Game:" />
+                                          <ComboBox fx:id="addReservationGame" layoutX="406.0" layoutY="102.0" prefWidth="150.0" />
+                                          <Label layoutX="169.0" layoutY="166.0" text="Day:" />
+                                          <Label layoutX="205.0" layoutY="166.0" text="Month:" />
+                                          <Label layoutX="262.0" layoutY="166.0" text="Year:" />
+                                          <TextField fx:id="addReservationSDay" layoutX="165.0" layoutY="185.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <TextField fx:id="addReservationSMonth" layoutX="204.0" layoutY="185.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <TextField fx:id="addReservationSYear" layoutX="254.0" layoutY="185.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <Label layoutX="309.0" layoutY="166.0" text="Hour:" />
+                                          <TextField fx:id="addReservationSHour" layoutX="308.0" layoutY="185.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="343.0" layoutY="166.0" text="Minute:" />
+                                          <TextField fx:id="addReservationSMinute" layoutX="348.0" layoutY="185.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="571.0" layoutY="167.0" text="Day:" />
+                                          <Label layoutX="607.0" layoutY="167.0" text="Month:" />
+                                          <Label layoutX="664.0" layoutY="167.0" text="Year:" />
+                                          <TextField fx:id="addReservationEDay" layoutX="567.0" layoutY="186.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <TextField fx:id="addReservationEMonth" layoutX="606.0" layoutY="186.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <TextField fx:id="addReservationEYear" layoutX="656.0" layoutY="186.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <Label layoutX="711.0" layoutY="167.0" text="Hour:" />
+                                          <TextField fx:id="addReservationEHour" layoutX="710.0" layoutY="186.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="745.0" layoutY="167.0" text="Minute:" />
+                                          <TextField fx:id="addReservationEMinute" layoutX="750.0" layoutY="186.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Line endX="58.33331298828125" layoutX="497.0" layoutY="194.0" startX="-100.0" />
+                                          <Line endX="-38.0" endY="24.333358764648438" layoutX="592.0" layoutY="169.0" startX="-70.33331298828125" startY="7.66668701171875" />
+                                          <Line endX="-96.0" endY="30.0" layoutX="621.0" layoutY="184.0" startX="-66.29290771484375" startY="10.04046630859375" />
+                                          <Label layoutX="247.0" layoutY="139.0" text="Start date:" />
+                                          <Label layoutX="652.0" layoutY="139.0" text="End date:" />
+                                          <Button fx:id="addReservationConfirm" layoutX="397.0" layoutY="251.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="168.0" text="Add reservation" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="manageReservationsTab" onSelectionChanged="#tabChanged" text="Manage reservations">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="reservationsListTab" layoutX="1.0" prefHeight="377.0" prefWidth="191.0" />
+                                          <Label layoutX="231.0" layoutY="38.0" text="Member:" />
+                                          <Label fx:id="manageReservationsMember" layoutX="286.0" layoutY="38.0" text="(null)" />
+                                          <Label layoutX="232.0" layoutY="69.0" text="Game:" />
+                                          <Label fx:id="manageReservationsSDate" layoutX="299.0" layoutY="101.0" text="(null)" />
+                                          <Label layoutX="232.0" layoutY="101.0" text="Start date:" />
+                                          <Label fx:id="manageReservationsGame" layoutX="280.0" layoutY="69.0" text="(null)" />
+                                          <Label fx:id="manageReservationsEDate" layoutX="299.0" layoutY="130.0" text="(null)" />
+                                          <Label layoutX="232.0" layoutY="130.0" text="End date" />
+                                          <Button fx:id="manageReservationsEnd" layoutX="231.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleActions" text="End reservation" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="borrowingsTab" text="Borrowings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane fx:id="borrowingsTabPane" prefHeight="405.0" prefWidth="951.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="addBorrowingTab" text="Add borrowing">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="457.0" layoutY="26.0" text="Member:" />
+                                          <ComboBox fx:id="addBorrowingMember" layoutX="406.0" layoutY="43.0" prefWidth="150.0" />
+                                          <Label layoutX="464.0" layoutY="85.0" text="Game:" />
+                                          <ComboBox fx:id="addBorrowingGame" layoutX="406.0" layoutY="102.0" prefWidth="150.0" />
+                                          <Label layoutX="169.0" layoutY="166.0" text="Day:" />
+                                          <Label layoutX="205.0" layoutY="166.0" text="Month:" />
+                                          <Label layoutX="262.0" layoutY="166.0" text="Year:" />
+                                          <TextField fx:id="addBorrowingSDay" layoutX="165.0" layoutY="185.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <TextField fx:id="addBorrowingSMonth" layoutX="204.0" layoutY="185.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <TextField fx:id="addBorrowingSYear" layoutX="254.0" layoutY="185.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <Label layoutX="309.0" layoutY="166.0" text="Hour:" />
+                                          <TextField fx:id="addBorrowingSHour" layoutX="308.0" layoutY="185.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="343.0" layoutY="166.0" text="Minute:" />
+                                          <TextField fx:id="addBorrowingSMinute" layoutX="348.0" layoutY="185.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="571.0" layoutY="167.0" text="Day:" />
+                                          <Label layoutX="607.0" layoutY="167.0" text="Month:" />
+                                          <Label layoutX="664.0" layoutY="167.0" text="Year:" />
+                                          <TextField fx:id="addBorrowingEDay" layoutX="567.0" layoutY="186.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <TextField fx:id="addBorrowingEMonth" layoutX="606.0" layoutY="186.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <TextField fx:id="addBorrowingEYear" layoutX="656.0" layoutY="186.0" prefHeight="25.0" prefWidth="41.0" />
+                                          <Label layoutX="711.0" layoutY="167.0" text="Hour:" />
+                                          <TextField fx:id="addBorrowingEHour" layoutX="710.0" layoutY="186.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Label layoutX="745.0" layoutY="167.0" text="Minute:" />
+                                          <TextField fx:id="addBorrowingEMinute" layoutX="750.0" layoutY="186.0" prefHeight="25.0" prefWidth="31.0" />
+                                          <Line endX="58.33331298828125" layoutX="497.0" layoutY="194.0" startX="-100.0" />
+                                          <Line endX="-38.0" endY="24.333358764648438" layoutX="592.0" layoutY="169.0" startX="-70.33331298828125" startY="7.66668701171875" />
+                                          <Line endX="-96.0" endY="30.0" layoutX="621.0" layoutY="184.0" startX="-66.29290771484375" startY="10.04046630859375" />
+                                          <Label layoutX="247.0" layoutY="139.0" text="Start date:" />
+                                          <Label layoutX="652.0" layoutY="139.0" text="End date:" />
+                                          <Button fx:id="addBorrowingConfirm" layoutX="397.0" layoutY="308.0" mnemonicParsing="false" onAction="#handleActions" prefHeight="25.0" prefWidth="168.0" text="Add borrowing" />
+                                          <Label layoutX="457.0" layoutY="229.0" text="Location:" />
+                                          <TextField fx:id="addBorrowingLocation" layoutX="378.0" layoutY="258.0" prefHeight="25.0" prefWidth="211.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="manageBorrowingsTab" onSelectionChanged="#tabChanged" text="Manage borrowings">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="borrowingsListTab" layoutX="1.0" prefHeight="377.0" prefWidth="191.0" />
+                                          <Label layoutX="231.0" layoutY="38.0" text="Member:" />
+                                          <Label fx:id="manageBorrowingMember" layoutX="286.0" layoutY="38.0" text="(null)" />
+                                          <Label layoutX="232.0" layoutY="69.0" text="Game:" />
+                                          <Label fx:id="manageBorrowingSDate" layoutX="299.0" layoutY="101.0" text="(null)" />
+                                          <Label layoutX="232.0" layoutY="101.0" text="Start date:" />
+                                          <Label fx:id="manageBorrowingGame" layoutX="280.0" layoutY="69.0" text="(null)" />
+                                          <Label fx:id="manageBorrowingEDate" layoutX="299.0" layoutY="130.0" text="(null)" />
+                                          <Label layoutX="232.0" layoutY="130.0" text="End date:" />
+                                          <Button fx:id="manageBorrowingEnd" layoutX="231.0" layoutY="189.0" mnemonicParsing="false" onAction="#handleActions" text="End borrowing" />
+                                          <Label fx:id="manageBorrowingLocation" layoutX="298.0" layoutY="155.0" text="(null)" />
+                                          <Label layoutX="231.0" layoutY="155.0" text="Location:" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="extrasTab" text="Extras">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="exportWebsite" layoutX="429.0" layoutY="133.0" mnemonicParsing="false" onAction="#handleActions" text="Export website" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="951.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>

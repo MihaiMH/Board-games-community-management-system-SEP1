@@ -1,0 +1,120 @@
+/* TOP START BY CRISTIAN */
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.top {
+    clear: both;
+    background-color: #DBEBEE;
+    height: 600px;
+    width: 100%;
+}
+ 
+.top-image {
+    width: 35%;
+    height: auto;
+    margin-top: 130px;
+    margin-left: 60px;
+}
+
+.top-description {
+    margin-left: 90px;
+    float: left;
+    width: 49%;
+}
+
+.top-title {
+    margin-top: 12%;
+}
+
+.top-join-us {
+    font-size: 65px;
+}
+
+.top-via {
+    font-size: 70px;
+    color: black;
+}
+
+.top-description-text {
+    font-size: 40px;
+}
+
+.news-img{
+    margin-left: 90px;
+}
+
+.news-text{
+    text-align: justify;
+    margin-right: 80px;
+}
+
+@media screen and (max-width:1380px) {
+    body{
+        overflow-x: hidden;
+    }
+    .top-image{
+        display: none;
+    }
+    
+    .top-title{
+        margin-top: 9%;
+    }
+    
+    .top-description{
+        margin-left: 40px;
+        width: 90%;
+    }
+  
+    .news-img{
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:890px){
+    .top{
+        height: 400px;
+    }
+    
+    .top-title{
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    
+    .top-description{
+        margin-left: 4%!important;
+    }
+    
+    .top-join-us{
+        font-size: 40px;
+    }
+    
+    .top-via{
+        font-size: 40px;
+    }
+    
+    .top-description-text{
+        font-size: 25px;
+    }
+    
+    .news-content{
+        display: block!important;
+        justify-content: center;
+    }
+    
+    .news-img{
+        margin-left: 4%;
+        width: 93%;
+        margin-right: 0!important;
+    }
+    
+    .news-description{
+        margin-left: 4%;
+    }
+
+    .news-text{
+        margin-right: 15px!important;
+    }
+
+}

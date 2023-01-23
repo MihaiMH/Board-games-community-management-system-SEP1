@@ -1,0 +1,5 @@
+In order for everything to work,
+You should run the project/src/main/AppGUIFXMLTEST.java file.
+
+In order to check the website, you should open it using Visual Studio and run it on a live server in order
+for AJAX to work. 

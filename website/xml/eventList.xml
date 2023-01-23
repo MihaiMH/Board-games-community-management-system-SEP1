@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <root>
+ 	<eventList>
+		<event>
+			<name>VIA Chess Tournament</name>
+			<description>A chess tournament organized for every
+chess lover. Everyone is welcome! 
+Come and show everyone that you are 
+the best chess player ever.</description>
+			<date>06/12/2022 14:25</date>
+			<game>Chess</game>
+			<participants>
+				<participant>Mihai Mihaila#5%G7S1%3</participant>
+				<participant>Michael Statham#5%G7S1%3</participant>
+			</participants>
+		</event>
+	</eventList>
+</root>

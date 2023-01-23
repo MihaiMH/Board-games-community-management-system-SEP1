@@ -1,0 +1,377 @@
+/* BY MIHAI */
+.body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} /* sets the font-family for each text on the page */
+
+.col{
+    padding: 0;
+    margin: 0;
+}
+
+/* TOP START */
+.top{
+    background-color: #DBEBEE;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+} /* removes the effect of the float from the navbar, sets the height of the part and its background color */
+
+.top-text{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    padding-top:30px;
+    padding-left:80px;
+    padding-right:15px;
+
+
+} /* sets width of the text part of the top part, its inside top and left margins (paddings), also puts the text on the left with the float property */
+
+.top-text p{
+    font-size:24px;
+    text-align:justify;
+    padding-top:19px;
+} /* sets the properties for the paragraph of the top part */
+
+.top-text h3{
+    font-size:40px;
+} /* sets the properties of the heading from the top */
+
+.top-image{
+    width:35%;
+}
+
+.top-image img{
+ height:100%;
+ width:100%;
+} /* sets the properties of the image from the TOP*/
+
+@media screen and (max-width:991px) {
+    .top{
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-text{
+        font-size:20px;
+        text-align:center;
+        padding:10px 0;
+        width:75%;
+    }
+    .top-text h3{
+        text-align:center;
+        width:100%;
+    }
+
+    .top-image {
+        display:none;
+    }
+
+    .top-text p{
+        font-size:15px;
+        text-align:justify;
+        padding-top:30px;
+        width:100%;
+    } 
+}
+
+/* TOP END */
+
+
+/* CATEGORY STTART */
+.category{
+    height:140px;
+    background-color: #808080;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} /*Sets the properties of the category class*/
+.category h1{
+    font-size:50px;
+    text-align: center;
+} /* Sets the properties of the heading from the category */
+
+@media screen and (min-width:992px) and (max-width:1400px){
+    .category{
+        height:120px;
+    }    
+    .category h1{
+        font-size:30px;
+    }
+
+}
+
+@media screen and (max-width:991px) {
+    .category{
+        height:100px;
+    }    
+    .category h1{
+        font-size:25px;
+    }
+}
+
+
+/* CATEGORY END */
+
+
+/* Description Item 1 Start */
+.desc-item-1{
+    height:400px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #C1E7EE;
+} /* sets the main properties of the desc-item-1 class*/
+
+.desc-item-1-image{
+    width:35%;
+}
+
+.desc-item-1 img{
+    height:100%;
+    width:100%;
+} /* sets the properties for the image from the desc-item-1 class */
+
+.desc-item-1-text{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    padding-top:30px;
+    padding-left:15px;
+    padding-right:120px;
+}  /* set the properties for the paragraph and the heading from the desc-item-1-text class */
+
+.desc-item-1-text p{
+    font-size:19px;
+    text-align:justify;
+    padding-top:30px;
+    font-weight:normal!important;
+    
+} /* sets the properties for the paragraph from the desc-item-1-text class */
+
+.desc-item-1-text  h3{
+    text-align:right;
+    font-size:40px;
+} /* sets the properties for the heading from the desc-item-1-text class */
+
+@media screen and (min-width:992px) and (max-width:1400px){
+    .desc-item-1{
+        height:400px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #DBEBEE;
+    } 
+    .desc-item-1-text p{
+        font-size:16px;
+        text-align:justify;
+        padding-top:30px;
+        font-weight:normal!important;
+        
+    }
+    .desc-item-1-text  h3{
+        text-align:right;
+        font-size:24px;
+    }
+    .desc-item-1-text{
+        padding-right:70px;
+    }
+
+}
+
+
+@media screen and (min-width:600px) and (max-width:991px) {
+    .desc-item-1{
+        height:410px;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc-item-1-text{
+        font-size:20px;
+        text-align:center;
+        padding:10px 0;
+        width:75%;
+    }
+    .desc-item-1-text h3{
+        text-align:center;
+        width:100%;
+    }
+
+    .desc-item-1-image {
+        display:none;
+    }
+
+    .desc-item-1-text p{
+        font-size:15px;
+        text-align:justify;
+        padding-top:30px;
+        width:100%;
+    } 
+}
+
+    @media screen and (max-width:599px) {
+        .desc-item-1{
+            height:550px;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        .desc-item-1-text{
+            font-size:20px;
+            text-align:center;
+            padding:10px 0;
+            width:75%;
+        }
+        .desc-item-1-text h3{
+            text-align:center;
+            width:100%;
+            padding-top:50px;
+            font-size:20px;
+        }
+    
+        .desc-item-1-image {
+            display:none;
+        }
+    
+        .desc-item-1-text p{
+            font-size:17px;
+            text-align:justify;
+            padding-top:20px;
+            width:100%;
+        } 
+    }
+
+
+
+/* Description Item 1 End */
+
+
+
+/* Description Iten 2 START */
+.desc-item-2{
+    height:400px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#AFE6F1;
+} /* sets the main properties of the desc-item-2 class*/
+
+.desc-item-2-image{
+    width:35%;
+}
+
+.desc-item-2-text{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    padding-top:30px;
+    padding-left:120px;
+    padding-right:15px;
+} /* set the properties for the paragraph and the heading from the desc-item-2-text class */
+
+.desc-item-2 p{
+    font-size:19px;
+    text-align:justify;
+    padding-top:30px;
+    font-weight:normal!important;
+}/* sets the properties for the paragraph from the desc-item-2-text class */
+
+.desc-item-2 h3{
+    font-size:40px;
+}/* sets the properties for the heading from the desc-item-2-text class */
+
+.desc-item-2 img{
+    height:100%;
+    width:100%;
+}/* sets the properties for the image from the desc-item-2 class */
+
+@media screen and (min-width:992px) and (max-width:1400px){
+    .desc-item-2{
+        height:400px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+    .desc-item-2-text p{
+        font-size:16px;
+        text-align:justify;
+        padding-top:30px;
+        font-weight:normal!important;
+        
+    }
+    .desc-item-2-text  h3{
+        font-size:24px;
+    }
+    .desc-item-2-text{
+        padding-left:70px;
+
+    } 
+
+}
+
+@media screen and (min-width:600px) and (max-width:991px) {
+    .desc-item-2{
+        height:410px;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc-item-2-text{
+        font-size:20px;
+        text-align:center;
+        padding:10px 0;
+        width:75%;
+    }
+    .desc-item-2-text h3{
+        text-align:center;
+        width:100%;
+    }
+
+    .desc-item-2-image {
+        display:none;
+    }
+
+    .desc-item-2-text p{
+        font-size:15px;
+        text-align:justify;
+        padding-top:15px;
+        width:100%;
+    } 
+}
+
+@media screen and (max-width:599px){
+    .desc-item-2{
+        height:550px;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc-item-2-text{
+        font-size:20px;
+        text-align:center;
+        padding:10px 0;
+        width:75%;
+    }
+    .desc-item-2-text h3{
+        text-align:center;
+        width:100%;
+        font-size:20px;
+        padding-top:20px;
+    }
+
+    .desc-item-2-image {
+        display:none;
+    }
+
+    .desc-item-2-text p{
+        font-size:17px;
+        text-align:justify;
+        padding-top:25px;
+        width:100%;
+    } 
+}
+
+
+/* Description Item 2 END */

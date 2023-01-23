@@ -1,0 +1,19 @@
+body{
+    background-color: #E4F4FC;
+}
+
+.Heading h3{
+    font-size: 40px;
+    color: #606060;
+}
+.Heading{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+
+@media screen and (max-width:400px) {
+    .Heading h3{
+        font-size:20px;
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <root>
+ 	<gameList>
+		<game>
+			<name>Chess</name>
+			<description>Chess is an abstract strategy game and involves no hidden information. 
+It is played on a chessboard with 64 squares arranged in an eight-by-eight grid.</description>
+			<maxPlayers>2</maxPlayers>
+			<status></status>
+			<urlImage>chess.jpg</urlImage>
+			<rating>4.00</rating>
+		</game>
+		<game>
+			<name>Checkers</name>
+			<description>Checkers is played by two opponents on opposite sides of the game board. 
+One player has dark pieces (usually black); 
+the other has light pieces (usually white or red). 
+Players alternate turns. A player cannot move an opponent's pieces.</description>
+			<maxPlayers>2</maxPlayers>
+			<status></status>
+			<urlImage>checkers.jpg</urlImage>
+			<rating>NaN</rating>
+		</game>
+		<game>
+			<name>Pick 4</name>
+			<description>A good game</description>
+			<maxPlayers>2</maxPlayers>
+			<status></status>
+			<urlImage>#</urlImage>
+			<rating>NaN</rating>
+		</game>
+	</gameList>
+</root>

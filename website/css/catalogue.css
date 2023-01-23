@@ -1,0 +1,36 @@
+/* BY CRISTIAN */
+/* This is the container div which is centered on the page */
+.container {
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    /* background-image: url("../images/catalogue/catalog_background.png"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+.card{
+    background-color: #E4F4FC;
+}
+
+.image img{
+    height: 200px;
+    width:100%;
+}
+
+
+
+h3{
+    font-size:medium;
+}
+@media screen and (max-width:767px) {
+    .container-fluid {
+        background-image: none;
+    }
+
+
+}
+

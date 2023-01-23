@@ -1,0 +1,70 @@
+/* BY MIHAI */
+
+
+
+.row h1{
+    color:white;
+    font-size:50px;
+}
+
+.item{
+    /* border:2px solid #8799a32a!important; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:5px;
+    width:250px;
+    border:5px black;
+}
+
+.item-social img{
+    height:40px;
+}
+.item-image img{
+    height:300px;
+    width:100%;
+    object-fit: cover;
+}
+
+.item-text{
+    color:white;
+    font-size:20px;  
+    text-align: center;
+    font-weight:200;
+    padding-bottom:20px;
+}
+
+.item-text a{
+    text-decoration: none;
+
+    color:white;
+}
+
+.item-social img{
+    transform: scale(1);
+    transition: 0.3s linear;
+}
+
+.item-social img:hover{
+    transform: scale(1.1);
+    transition: 0.3s linear;
+}
+
+.content-grid{
+    background-color:#AFE6F1;
+
+}
+
+.row{
+    justify-content: center;
+}
+
+@media screen and ( max-width:767px ) {
+    body{
+        margin:0 0 110px 0!important;
+    }
+    .content-grid{
+        padding-bottom:15px;
+    }
+}

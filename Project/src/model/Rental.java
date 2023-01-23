@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 /**
  * A class that stores the rent for a game
- * @author Cristian Josan
+ *
+ * @author Cristian Josan && Mihai Mihaila && Tomas Masiar
  * @version 1.0
  */
 public class Rental implements Serializable
@@ -16,30 +17,16 @@ public class Rental implements Serializable
   private String location;
 
   /**
-   * Four-argument constructor initializing the rent
-   * @param start_period start period as a Date to initialize
-   * @param end_period end period as a Date to initialize
-   * @param member the Member to initialize
-   * @param game the Game to initialize
-   */
-  public Rental(Date start_period, Date end_period, Member member, Game game)
-  {
-    this.member = member;
-    this.game = game;
-    this.start_period = start_period;
-    this.end_period = end_period;
-    this.location = "No location";
-  }
-
-  /**
    * Five-argument constructor initializing the rent including location
+   *
    * @param start_period start period as a Date to initialize
-   * @param end_period end period as a Date to initialize
-   * @param member the Member to initialize
-   * @param game the Game to initialize
-   * @param location location as a String to initialize
+   * @param end_period   end period as a Date to initialize
+   * @param member       the Member to initialize
+   * @param game         the Game to initialize
+   * @param location     location as a String to initialize
    */
-  public Rental(Date start_period, Date end_period, Member member, Game game, String location)
+  public Rental(Date start_period, Date end_period, Member member, Game game,
+      String location)
   {
     this.member = member;
     this.game = game;
@@ -50,6 +37,7 @@ public class Rental implements Serializable
 
   /**
    * Gets the Member from the Reservation
+   *
    * @return the Member with all information into an Object
    */
   public Member getMember()
@@ -59,6 +47,7 @@ public class Rental implements Serializable
 
   /**
    * Gets the Game from the Reservation
+   *
    * @return the Game with all information into an Object
    */
   public Game getGame()
@@ -68,6 +57,7 @@ public class Rental implements Serializable
 
   /**
    * Gets the start Date of the Reservation
+   *
    * @return the start Date into an Object
    */
   public Date getStart_period()
@@ -77,6 +67,7 @@ public class Rental implements Serializable
 
   /**
    * Gets the end Date of the Reservation
+   *
    * @return the end Date into an Object
    */
   public Date getEnd_period()
@@ -86,6 +77,7 @@ public class Rental implements Serializable
 
   /**
    * Gets the location of the Reservation
+   *
    * @return the location as a String
    */
   public String getLocation()
@@ -94,33 +86,32 @@ public class Rental implements Serializable
   }
 
   /**
-   * Ends the rent of the game
-   */
-  public void endRent()
-  {
-    this.member = null;
-    this.game = null;
-    this.start_period = null;
-    this.end_period = null;
-    this.location = null;
-  }
-
-  /**
    * Checks if the Rental is the same as the other Object
+   *
    * @param obj the Object to check with
    * @return true if the Object obj is the same as the Rental, else false
    */
   public boolean equals(Object obj)
   {
-    if( obj == null || getClass() != obj.getClass() )
+    if (obj == null || getClass() != obj.getClass())
     {
       return false;
     }
 
-    Rental other = (Rental)obj;
+    Rental other = (Rental) obj;
 
-    return member.equals(other.member) && game.equals(other.game) &&
-           start_period.equals(other.start_period) &&
-           end_period.equals(other.end_period) && location.equals(other.location);
+    return member.equals(other.member) && game.equals(other.game)
+        && start_period.equals(other.start_period) && end_period.equals(
+        other.end_period) && location.equals(other.location);
+  }
+
+  /**
+   * Gets the period of a rental
+   *
+   * @return period as a String
+   */
+  public String toString()
+  {
+    return start_period + " - "+end_period;
   }
 }

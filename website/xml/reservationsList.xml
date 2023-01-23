@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <root>
+ 	<reservationsList>
+		<reservation>
+			<start_date>07/12/2022 12:15</start_date>
+			<end_date>09/12/2022 13:15</end_date>
+			<member>Mihai Mihaila</member>
+			<game>Chess</game>
+		</reservation>
+		<reservation>
+			<start_date>11/12/2022 12:14</start_date>
+			<end_date>13/12/2022 14:15</end_date>
+			<member>John Johnson</member>
+			<game>Chess</game>
+		</reservation>
+		<reservation>
+			<start_date>10/02/2023 12:16</start_date>
+			<end_date>16/02/2023 15:28</end_date>
+			<member>Mihai Mihaila</member>
+			<game>Chess</game>
+		</reservation>
+	</reservationsList>
+</root>
